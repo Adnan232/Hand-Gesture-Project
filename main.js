@@ -45,7 +45,7 @@ function preload() {
   goodbye = loadImage("Alerts/Goodbye.jpg");
   understood = loadImage("Alerts/Understood.jpeg");
   brb = loadImage("Alerts/brb.jpeg");
-  // haha = loadImage("Alerts/Haha.jpeg");
+  haha = loadImage("Alerts/Haha.jpeg");
 }
 
 function setup() {
@@ -91,9 +91,9 @@ function draw() {
   else if (label == 'Goodbye') {
     goodbyeFade = 255;
   }
-  // else if (label == 'Haha') {
-  //   hahaFade = 255;
-  // }
+  else if (label == 'Haha') {
+    hahaFade = 255;
+  }
   else if (label == 'Understood') {
     understoodFade = 255;
   }
@@ -126,11 +126,11 @@ function draw() {
     image(goodbye, 10, 10, 250, 362);
     goodbyeFade -= 10;    
   }
-  // else if (hahaFade > 0) {
-  //   tint(255, hahaFade);
-  //   image(haha, 10, 10, 250, 250);
-  //   hahaFade -= 10;    
-  // }
+  else if (hahaFade > 0) {
+    tint(255, hahaFade);
+    image(haha, 10, 10, 250, 250);
+    hahaFade -= 10;    
+  }
   else if (understoodFade > 0) {
     tint(255, understoodFade);
     image(understood, 10, 10, 250, 364);
